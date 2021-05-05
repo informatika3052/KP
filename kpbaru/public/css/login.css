@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+   height: 100vh;
+   max-width: 100%;
+   /* background-color: rgba(40, 245, 40, 0.719); */
+   /* background:linear-gradient(to bottom right, rgb(6, 230, 6) ,rgb(6, 185, 6),rgb(4, 141, 4)) ; */
+}
+
+form {
+
+    height: 100vh;
+    max-width: 100%;
+    /* background-color: rgba(40, 245, 40, 0.719); */
+    background-color: rgba(182, 86, 30, 0.979);
+}
+.animasi {
+    width: 40%;
+    height: 90%;
+    background-color: rgba(255, 255, 255, 0.692);
+    position: relative;
+    top: 5%;
+    left: 30%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(80, 73, 73, 0.555);
+}
+.animasi h1{
+    padding:  5% 0;
+}
+.animasi h1,.animasi h2 {
+    text-align: center;
+}
+.animasi img {
+    margin-left: 20%;
+    width: 50%;
+    height: 50%;
+}
+
+
+.inputarea {
+    width: 50%;
+   position: absolute;
+   top: 55%;
+   left: 10%;
+   display: flex;
+   flex-direction: column;
+}
+
+.inputarea input::placeholder {
+    color: rgb(83, 79, 74);
+}
+
+.inputarea input {
+    margin-left: 5%;
+    background-color: rgba(5, 4, 4, 0.068);
+    margin-top: 10%;
+    width: 150%;
+    border: none;
+    border-radius: 20px;
+    padding: 4% 4% 4% 8%;
+    height: 130%; outline: none;
+    font-size: 1em;
+}
+
+
+.sigin {
+    position: absolute;
+    bottom: 5%;
+    left: 12%;
+    width: 100%;
+    height: 8%;
+    justify-content: space-between;
+    display: flex;
+}
+
+.sigin button {
+    width: 30%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: rgba(65, 255, 27, 0.788);
+    border: none;
+    color: rgb(15, 14, 10);
+    font-size: 1em;
+}
+
+.sigin button:hover {
+    background-color: rgb(52, 212, 19);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.sigin a{
+    color:  rgb(0, 0, 0);
+    font-size: 1.3em;
+    margin-right: 30%;
+    margin-top: 1%;
+    text-decoration: none;
+}
+
+.sigin a:hover{
+    color:rgb(78, 114, 21);
+}

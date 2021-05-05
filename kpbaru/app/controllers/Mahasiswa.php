@@ -1,0 +1,73 @@
+<?php
+
+class Mahasiswa extends Controller
+{
+    // fungsi yang digunakan untuk memanggil semua data dari database mahasiswa
+    public function index()
+    {
+        $data['judul'] = 'Daftar Mahasiswa';
+        $data['mhs'] = $this->model('Mahasiswa_model')->getAllmahasiswa();
+        $this->view('templates/header', $data);
+        $this->view('mahasiswa/index', $data);
+        $this->view('templates/footer');
+    }
+
+    // funtion yang digunakan untuk menampilkan data dari database mahasiswa berdasarkan id
+    public function detail($id)
+    {
+
+        $data['judul'] = 'Daftar Mahasiswa';
+        $data['mhs'] = $this->model('Mahasiswa_model')->getMahasiswaById($id);
+        $this->view('templates/header', $data);
+        $this->view('mahasiswa/detail', $data);
+        $this->view('templates/footer');
+    }
+
+    // fungsi yang digunakan untuk menambah data mahasiswa
+    public function tambah()
+    {
+        if ($this->model('Mahasiswa_model')->tambahDataMahasiswa($_POST) > 0) {
+            Flasher::setFlash('berhasil', 'ditambahkan', 'success');
+            header('Location: ' . BASEURL . '/mahasiswa');
+            exit;
+        } else {
+            Flasher::setFlash('gagal', 'ditambahkan', 'danger');
+            header('Location: ' . BASEURL . '/mahasiswa');
+            exit;
+        }
+    }
+    public function hapus($id)
+    {
+        if ($this->model('Mahasiswa_model')->hapusDataMahasiswa($id) > 0) {
+            Flasher::setFlash('berhasil', 'dihapus', 'success');
+            header('Location: ' . BASEURL . '/mahasiswa');
+            exit;
+        } else {
+            Flasher::setFlash('gagal', 'dihapus', 'danger');
+            header('Location: ' . BASEURL . '/mahasiswa');
+            exit;
+        }
+    }
+    public function getUbah()
+    {
+        $json = file_get_contents('php://input');
+        $data = json_decode($json);
+        // echo $data;
+        echo json_encode($this->model('Mahasiswa_model')->getMahasiswaById($data));
+        die();
+        // echo json_encode($this->model('Mahasiswa_model')->getMahasiswaById($data));
+    }
+
+    public function ubah()
+    {
+        if ($this->model('Mahasiswa_model')->ubahDataMahasiswa($_POST) > 0) {
+            Flasher::setFlash('berhasil', 'diubah', 'success');
+            header('Location: ' . BASEURL . '/mahasiswa');
+            exit;
+        } else {
+            Flasher::setFlash('gagal', 'diubah', 'danger');
+            header('Location: ' . BASEURL . '/mahasiswa');
+            exit;
+        }
+    }
+}
