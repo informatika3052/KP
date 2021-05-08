@@ -5,7 +5,6 @@ class Neraca extends Controller
 
     public function index()
     {
-
         $data['judul'] = 'Neraca';
         $this->view('templates/header', $data);
         $this->view('neraca/index', $data);
@@ -14,14 +13,18 @@ class Neraca extends Controller
     // fungsi yang digunakan untuk menambah data mahasiswa
     public function tambah()
     {
-        if ($this->model('Neraca_Model')->tambahDataNeraca($_POST) > 0) {
-            Flasher::setFlash('berhasil', 'ditambahkan', 'success');
-            header('Location: ' . BASEURL . '/home/dashboard');
-            exit;
-        } else {
-            Flasher::setFlash('gagal', 'ditambahkan', 'danger');
-            header('Location: ' . BASEURL . '/neraca');
-            exit;
+
+        if (isset($_POST["neraca"])) {
+            $data =  $this->model('Neraca_Model')->tambahDataNeraca($_POST);
+            if ($data > 0) {
+                Flasher::setFlash('berhasil', 'ditambahkan', 'success');
+                header('Location: ' . BASEURL . '/modal');
+                exit;
+            } else {
+                Flasher::setFlash('gagal', 'ditambahkan', 'danger');
+                header('Location: ' . BASEURL . '/neraca');
+                exit;
+            }
         }
     }
 }

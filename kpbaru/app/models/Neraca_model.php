@@ -12,24 +12,26 @@ class Neraca_model
         $this->db = new Database;
     }
 
+
     public function getUserById($pass)
     {
         $this->db->query('SELECT * FROM ' . $this->tablee . ' WHERE pass=:pass');
 
         $this->db->bind('pass', $pass['pass']);
 
-
         return $this->db->single();
     }
+
     public function tambahDataNeraca($data)
     {
+        session_start();
+        $userId = $_SESSION['idPegawai'];
+
         $query = "INSERT INTO neraca VALUES (
             '',:idPegawaiiii,:kasir,:bank,:brankas,:piutang,:stok,:sewa,:akumulasi_sewa,:komp,:akumulasi_komp,:kulkas,:akumulasi_kulkas,:kulkas_kantor,:akumulasi_kulkas_kantor,:hp,:akumulasi_hp)";
 
-        session_start();
-        $pass = $_SESSION['idPegawaiiii'];
         $this->db->query($query);
-        $this->db->bind('idPegawaiiii', $pass);
+        $this->db->bind('idPegawaiiii', $userId);
         $this->db->bind('kasir', $data['kasir']);
         $this->db->bind('bank', $data['bank']);
         $this->db->bind('brankas', $data['brankas']);
@@ -48,9 +50,8 @@ class Neraca_model
 
         var_dump($_POST);
         $this->db->execute();
+
         return  $this->db->rowCount();
-        // return  $this->db->execute();
-        // return  $this->db->rowCount();
     }
     // public function hapusDataMahasiswa($id)
     // {

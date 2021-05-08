@@ -7,20 +7,19 @@
 body {
    height: 100vh;
    max-width: 100%;
-   /* background-color: rgba(40, 245, 40, 0.719); */
 }
 
 form {
     
     height: 100vh;
     max-width: 100%;
-    background:linear-gradient(to bottom right, rgb(6, 230, 6) ,rgb(6, 185, 6),rgb(4, 141, 4)) ;
-      /* background-color: rgba(40, 245, 40, 0.719); */
+    background-color: rgba(40, 245, 40, 0.719);
+    /* background:linear-gradient(to bottom right, rgb(6, 230, 6) ,rgb(6, 185, 6),rgb(4, 141, 4)) ; */
 }
 .animasi {
     width: 40%;
     height: 90%;
-    background-color: rgba(255, 255, 255, 0.692);
+    background-color: rgba(255, 255, 255, 0.781);
     position: relative;
     top: 5%;
     left: 30%;

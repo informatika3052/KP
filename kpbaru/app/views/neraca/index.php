@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halaman <?= $data['user']; ?></title>
-    <link rel="stylesheet" href="<?= BASEURL; ?>/css/side.css">
+    <link rel="stylesheet" href="<?= BASEURL; ?>/css/sidebar.css">
     <link rel="stylesheet" href="<?= BASEURL; ?>/css/bootstrap.css">
     <link rel="stylesheet" href="<?= BASEURL; ?>/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -114,7 +114,7 @@
 
             <input type="hidden" name="idPegwaiiii" id="idPegwaiiii">
             <div class="col-auto mt-4">
-                <button type="submit" class="btn btn-primary mb-3">Simpan</button>
+                <button type="submit" class="btn btn-primary mb-3" name="neraca">Simpan</button>
             </div>
         </form>
     </div>

@@ -19,12 +19,17 @@ class Database
         // data source name
         $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->db_name;
         try {
+
             $this->dbh =  new PDO($dsn, $this->user, $this->pass, $option);
         } catch (PDO $e) {
             die($e->errorCode());
         }
     }
 
+    // public function lastInsertId()
+    // {
+    //     return $this->dbh->lastInsertId();
+    // }
     // fungsi yang digunakan untuk menampung data sementara untuk selanjut nya di binding
     public function query($query)
     {
@@ -76,7 +81,6 @@ class Database
     // fungsi yang digunakan untuk menambah baris baru setelah data ditambahkan 
     public function rowCount()
     {
-
         return $this->statement->rowCount();
     }
 }

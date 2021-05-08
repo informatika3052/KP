@@ -9,21 +9,24 @@ class Home extends Controller
 {
     public function index()
     {
-
-        $this->view('home/index');
+        $data['judul'] = 'Login';
+        $this->view('home/index', $data);
         if (isset($_POST["login"])) {
-            var_dump($_POST);
-            // header('Location: ' . BASEURL . '/home/dashboard');
-            if ($this->model('Neraca_model')->getUserById($_POST) > 0) {
 
+            $data = $this->model('Neraca_model')->getUserById($_POST);
+            if ($data > 0) {
+                $this->model('Neraca_model')->getUserById($_POST);
+                $_SESSION['idPegawai'] = $data['idPegawai'];
                 $_SESSION["login"] = true;
+                // var_dump($data['idPegawai']);
+                // // $data = $this->model('Neraca_model')->getUserById($data);
+                // // // var_dump($data['idPegawai']);
+                // // $_SESSION['idPegawai'] = $data['idPegawai'];
+                // // $_SESSION["login"] = true;
 
                 header('Location: ' . BASEURL . '/home/dashboard');
-                // header('Location: ' . BASEURL . '/home/index');
                 exit;
             } else {
-
-                // header('Location: ' . BASEURL . '/home/dashboard');
                 header('Location: ' . BASEURL . '/home/index');
                 exit;
             }
@@ -31,20 +34,15 @@ class Home extends Controller
     }
     public function dashboard()
     {
-        $data['judul'] = 'Dashboiard';
-        $data['idPegawaiiii'] = $this->model('Neraca_model')->getUserById();
-        // $data = $this->model('Neraca_model')->getUserById();
-
-        // // session_start();
 
         if (!isset($_SESSION["login"])) {
             header("Location: login.php");
             exit;
         }
-        var_dump($_POST);
-        var_dump($_SESSION);
-        // var_dump($_SESSION);
-
+        // session_start();
+        // $oi =  $_SESSION['idPegawai'];
+        // var_dump($oi);
+        $data['judul'] = 'Dashboard';
         $this->view('templates/header', $data);
         $this->view('home/dashboard');
         $this->view('templates/footer');

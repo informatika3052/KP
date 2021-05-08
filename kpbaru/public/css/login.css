@@ -7,21 +7,20 @@
 body {
    height: 100vh;
    max-width: 100%;
-   /* background-color: rgba(40, 245, 40, 0.719); */
-   /* background:linear-gradient(to bottom right, rgb(6, 230, 6) ,rgb(6, 185, 6),rgb(4, 141, 4)) ; */
 }
 
 form {
-
+    
     height: 100vh;
     max-width: 100%;
-    /* background-color: rgba(40, 245, 40, 0.719); */
-    background-color: rgba(182, 86, 30, 0.979);
+    background-color: rgba(55, 241, 55, 0.884);
+    /* background:linear-gradient(to bottom right, rgb(6, 230, 6) ,rgb(6, 185, 6),rgb(4, 141, 4)) ; */
+    background:linear-gradient(to bottom right, rgba(55, 241, 55, 0.884) ,rgba(50, 218, 50, 0.884),rgba(38, 172, 38, 0.884)) ;
 }
 .animasi {
     width: 40%;
     height: 90%;
-    background-color: rgba(255, 255, 255, 0.692);
+    background-color: rgba(255, 255, 255, 0.863);
     position: relative;
     top: 5%;
     left: 30%;
@@ -35,7 +34,7 @@ form {
     text-align: center;
 }
 .animasi img {
-    margin-left: 20%;
+    margin-left: 25%;
     width: 50%;
     height: 50%;
 }
@@ -64,6 +63,8 @@ form {
     padding: 4% 4% 4% 8%;
     height: 130%; outline: none;
     font-size: 1em;
+    /* box-shadow: inset 0 0 3px #000000; */
+    box-shadow: inset 2px 2px 5px #888;
 }
 
 
