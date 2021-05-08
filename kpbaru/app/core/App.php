@@ -1,5 +1,7 @@
 <?php
 
+
+// Kode yang digunakan untuk mengatur halaman ketika pertama kali di load
 class App
 {
     protected $controller = 'Home';
@@ -7,6 +9,7 @@ class App
     protected $params = [];
 
 
+    // fungsi yang langsung dijalankan ketika halaman pertama kali dibuka
     public function __construct()
     {
         $url = $this->parseURL();
@@ -18,7 +21,7 @@ class App
                 unset($url[0]);
             }
         }
-       
+
         require_once '../app/controllers/' . $this->controller . '.php';
         $this->controller = new $this->controller;
 

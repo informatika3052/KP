@@ -1,14 +1,14 @@
 <?php
-// if (isset($_SESSION['login'])) {
-//     session_start();
-//     header('Location: ' . BASEURL . '/home/index');
-//     exit;
-// }
+
+//  Class yang dibuat untuk menghubungkan antara database dan view 
+// Tempat untuk pemanggilan view dan model
 
 class Home extends Controller
 {
+    // fungsi yang dipanggil ketika halaman pertama kali di load
     public function index()
     {
+        // Pengisian title halaman di html
         $data['judul'] = 'Login';
         $this->view('home/index', $data);
         if (isset($_POST["login"])) {
@@ -18,11 +18,6 @@ class Home extends Controller
                 $this->model('Neraca_model')->getUserById($_POST);
                 $_SESSION['idPegawai'] = $data['idPegawai'];
                 $_SESSION["login"] = true;
-                // var_dump($data['idPegawai']);
-                // // $data = $this->model('Neraca_model')->getUserById($data);
-                // // // var_dump($data['idPegawai']);
-                // // $_SESSION['idPegawai'] = $data['idPegawai'];
-                // // $_SESSION["login"] = true;
 
                 header('Location: ' . BASEURL . '/home/dashboard');
                 exit;
@@ -32,6 +27,8 @@ class Home extends Controller
             }
         }
     }
+
+    // fungsi yang dipanggil ketika user berhasil LOGIN
     public function dashboard()
     {
 
@@ -39,14 +36,13 @@ class Home extends Controller
             header("Location: login.php");
             exit;
         }
-        // session_start();
-        // $oi =  $_SESSION['idPegawai'];
-        // var_dump($oi);
         $data['judul'] = 'Dashboard';
         $this->view('templates/header', $data);
         $this->view('home/dashboard');
         $this->view('templates/footer');
     }
+
+    // fungsi yang dipanggil ketika user berhasil LOGOUT
     public function logout()
     {
         session_start();
@@ -58,3 +54,10 @@ class Home extends Controller
         exit;
     }
 }
+
+
+//  var_dump($data['idPegawai']);
+// $data = $this->model('Neraca_model')->getUserById($data);
+// var_dump($data['idPegawai']);
+// $_SESSION['idPegawai'] = $data['idPegawai'];
+// $_SESSION["login"] = true;

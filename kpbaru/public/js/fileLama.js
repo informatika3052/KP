@@ -92,3 +92,7 @@
 //             </div>
 //         </div>
 //     </form> -->
+
+
+
+{/* <a href="<?= BASEURL; ?>/neraca/tambah"><span class="badge bg-danger " onclick="return confirm('yakin');">Hapus</span></a> */ }

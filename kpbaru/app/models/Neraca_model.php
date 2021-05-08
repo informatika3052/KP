@@ -12,7 +12,8 @@ class Neraca_model
         $this->db = new Database;
     }
 
-
+    // fungsi untuk request ke database 
+    //  mencocokkan inputan user dengan data di database berdasarkan passowrd user
     public function getUserById($pass)
     {
         $this->db->query('SELECT * FROM ' . $this->tablee . ' WHERE pass=:pass');
@@ -22,6 +23,7 @@ class Neraca_model
         return $this->db->single();
     }
 
+    // fungsi untuk insert data dari inputan user untuk selanjutnya di kirim ke database
     public function tambahDataNeraca($data)
     {
         session_start();
@@ -53,46 +55,4 @@ class Neraca_model
 
         return  $this->db->rowCount();
     }
-    // public function hapusDataMahasiswa($id)
-    // {
-    //     $query = "DELETE FROM mahasiswa WHERE id = :id";
-
-    //     $this->db->query($query);
-    //     $this->db->bind('id', $id);
-
-    //     $this->db->execute();
-    //     return  $this->db->rowCount();
-    // }
-
-    // public function ubahDataMahasiswa($data)
-    // {
-    //     $query = "UPDATE mahasiswa SET 
-    //                 nama = :nama,
-    //                 nrp = :nrp,
-    //                 email = :email,
-    //                 jurusan = :jurusan
-    //               WHERE id = :id";
-
-    //     $this->db->query($query);
-    //     $this->db->bind('nama', $data['nama']);
-    //     $this->db->bind('nrp', $data['nrp']);
-    //     $this->db->bind('email', $data['email']);
-    //     $this->db->bind('jurusan', $data['jurusan']);
-    //     $this->db->bind('id', $data['id']);
-
-    //     $this->db->execute();
-    //     return  $this->db->rowCount();
-    // }
-    // public function getAllMahasiswa()
-    // {
-    //     $this->db->query('SELECT * FROM ' . $this->table);
-    //     return $this->db->resultSet();
-    // }
-
-    // public function getMahasiswaById($id)
-    // {
-    //     $this->db->query('SELECT * FROM ' . $this->table . ' WHERE id=:id');
-    //     $this->db->bind('id', $id);
-    //     return $this->db->single();
-    // }
 }

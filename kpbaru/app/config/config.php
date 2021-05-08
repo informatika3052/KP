@@ -1,5 +1,6 @@
 <?php
 
+// Konfigurasi baseurl untuk nantinya bisa digunakan di halaman yang akan di akses
 define('BASEURL', 'http://localhost/kpbaru/public');
 
 

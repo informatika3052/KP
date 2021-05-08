@@ -1,8 +1,12 @@
 <?php
 
+
+
+//  Class yang dibuat untuk menghubungkan antara database dan view 
+// Tempat untuk pemanggilan view dan model
 class Modal extends Controller
 {
-
+    // fungsi yang dipanggil ketika  user masuk ke halaman Modal
     public function index()
     {
         $data['judul'] = 'Modal';
@@ -17,7 +21,7 @@ class Modal extends Controller
         $this->view('modal/index');
         $this->view('templates/footer');
     }
-
+    // fungsi yang digunakan untuk menambah data Modal
     public function tambah()
     {
         if (isset($_POST["modal"])) {

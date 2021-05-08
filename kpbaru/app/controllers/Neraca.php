@@ -3,6 +3,7 @@
 class Neraca extends Controller
 {
 
+    // fungsi yang dipanggil ketika  user masuk ke halaman Neraca
     public function index()
     {
         $data['judul'] = 'Neraca';
@@ -10,7 +11,7 @@ class Neraca extends Controller
         $this->view('neraca/index', $data);
         $this->view('templates/footer');
     }
-    // fungsi yang digunakan untuk menambah data mahasiswa
+    // fungsi yang digunakan untuk menambah data neraca
     public function tambah()
     {
 
