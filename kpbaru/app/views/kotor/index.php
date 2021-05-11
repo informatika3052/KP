@@ -9,19 +9,19 @@
         <div class="mb-3 row">
             <label for="pendapat" class=" col-sm-4 form-label">Pendapatan</label>
             <div class="col-sm-6">
-                <input type="text" class="form-control" id="pendapat" name="pendapat" autocomplete="off">
+                <input type="text" class="form-control convert-data" id="pendapat" name="pendapat" autocomplete="off">
             </div>
         </div>
         <div class="mb-3 row">
             <label for="biyaPendaapat" class=" col-sm-4 form-label">Biaya Pendapatan</label>
             <div class="col-sm-6">
-                <input type="text" class="form-control" id="biyaPendaapat" name="biyaPendaapat" autocomplete="off">
+                <input type="text" class="form-control convert-data" id="biyaPendaapat" name="biyaPendaapat" autocomplete="off">
             </div>
         </div>
         <div class="mb-3 row">
             <label for="total" class=" col-sm-4 form-label">Total</label>
             <div class="col-sm-6">
-                <input type="text" class="form-control" id="total" name="total" autocomplete="off">
+                <input type="text" class="form-control convert-data" id="total" name="total" autocomplete="off">
             </div>
         </div>
         <input type="hidden" name="idPegwaii" id="idPegwaiii">

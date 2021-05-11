@@ -6,10 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halaman <?= $data['judul']; ?></title>
-    <link rel="stylesheet" href="<?= BASEURL; ?>/css/side.css">
+    <link rel="stylesheet" href="<?= BASEURL; ?>/css/dashboard.css">
+    <link rel="stylesheet" href="<?= BASEURL; ?>/css/sidebar.css">
     <link rel="stylesheet" href="<?= BASEURL; ?>/css/bootstrap.css">
+    <link rel="stylesheet" href="<?= BASEURL; ?>/css/scrollTop.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300&family=Playfair+Display:wght@400;500&family=Poppins:wght@200;300;500;600&family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -25,6 +29,12 @@
             <div class="toggle"></div>
         </div>
         <ul>
+            <li>
+                <a href="<?= BASEURL; ?>/home/dashboard">
+                    <span class="icon"><i class="fa fa-home"></i></span>
+                    <span class="title">Home</span>
+                </a>
+            </li>
             <li>
                 <a href="<?= BASEURL; ?>/neraca">
                     <span class="icon"><i class="fa fa-bar-chart"></i></span>
