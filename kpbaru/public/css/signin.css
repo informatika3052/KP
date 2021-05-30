@@ -6,114 +6,201 @@
     font-family: 'Poppins', sans-serif;
 
     font-family: 'Source Sans Pro', sans-serif; */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-   
-}
-
-body {
-   height: 100vh;
-   max-width: 100%;
-}
-
-form {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+       
+    }
     
-    height: 100vh;
-    max-width: 100%;
-    background-color: rgba(55, 241, 55, 0.884);
-    /* background:linear-gradient(to bottom right, rgb(6, 230, 6) ,rgb(6, 185, 6),rgb(4, 141, 4)) ; */
-    background:linear-gradient(to bottom right, rgba(55, 241, 55, 0.884) ,rgba(50, 218, 50, 0.884),rgba(38, 172, 38, 0.884)) ;
-}
-.animasi {
-    width: 40%;
-    height: 90%;
-    background-color: rgba(255, 255, 255, 0.863);
-    position: relative;
-    top: 5%;
-    left: 30%;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(80, 73, 73, 0.555);
-}
-.animasi h1{
-    padding:  5% 0;
-}
-.animasi h1,.animasi h2 {
-    text-align: center;
-}
-.animasi img {
-    margin-left: 25%;
-    width: 50%;
-    height: 50%;
-}
-
-
-.inputarea {
-    width: 50%;
-   position: absolute;
-   top: 55%;
-   left: 10%;
-   display: flex;
-   flex-direction: column;
-}
-
-.inputarea input::placeholder {
-    color: rgb(83, 79, 74);
-}
-
-.inputarea input {
-    margin-left: 5%;
-    background-color: rgba(5, 4, 4, 0.068);
-    margin-top: 10%;
-    width: 150%;
-    border: none;
-    border-radius: 20px;
-    padding: 4% 4% 4% 8%;
-    height: 130%; outline: none;
-    font-size: 1em;
-    /* box-shadow: inset 0 0 3px #000000; */
-}
-
-.inputarea input:focus{
+    body {
+       height: 100vh;
+       max-width: 100%;
+    }
     
-    box-shadow: inset 2px 2px 5px #888;
-}
-
-
-.sigin {
-    position: absolute;
-    bottom: 5%;
-    left: 12%;
-    width: 100%;
-    height: 8%;
-    justify-content: space-between;
-    display: flex;
-}
-
-.sigin button {
-    width: 30%;
-    height: 100%;
-    border-radius: 20px;
-    background-color: rgba(65, 255, 27, 0.788);
-    border: none;
-    color: rgb(15, 14, 10);
-    font-size: 1em;
-}
-
-.sigin button:hover {
-    background-color: rgb(52, 212, 19);
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-.sigin a{
-    color:  rgb(0, 0, 0);
-    font-size: 1.3em;
-    margin-right: 30%;
-    margin-top: 1%;
-    text-decoration: none;
-}
-
-.sigin a:hover{
-    color:rgb(78, 114, 21);
-}
+    form {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        height: 100vh;
+        max-width: 100%;
+        background:linear-gradient(to bottom right, rgba(55, 241, 55, 0.884) ,rgba(50, 218, 50, 0.884),rgba(38, 172, 38, 0.884)) ;
+    }
+    .animasi {
+        width: 40%;
+        height: 90%;
+        background-color: rgba(255, 255, 255, 0.863);
+        position: relative;
+        top: 5%;
+        left: 30%;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px rgba(80, 73, 73, 0.555);
+    }
+    .animasi h1{
+        padding:  5% 0;
+    }
+    .animasi h1,.animasi h2 {
+        text-align: center;
+    }
+    .animasi img {
+        margin-left: 25%;
+        width: 50%;
+        height: 50%;
+    }
+    
+    
+    .inputarea {
+        width: 50%;
+       position: absolute;
+       top: 55%;
+       left: 10%;
+       display: flex;
+       flex-direction: column;
+    }
+    
+    .inputarea input::placeholder {
+        color: rgb(83, 79, 74);
+    }
+    
+    .inputarea input {
+        margin-left: 5%;
+        background-color: rgba(5, 4, 4, 0.068);
+        margin-top: 10%;
+        width: 150%;
+        border: none;
+        border-radius: 20px;
+        padding: 4% 4% 4% 8%;
+        height: 130%; outline: none;
+        font-size: 1em;
+        /* box-shadow: inset 0 0 3px #000000; */
+    }
+    
+    .inputarea input:focus{
+        
+        box-shadow: inset 2px 2px 5px #888;
+    }
+    
+    
+    .sigin {
+        position: absolute;
+        bottom: 5%;
+        left: 12%;
+        width: 100%;
+        justify-content: space-between;
+        display: flex;
+    }
+    
+    .sigin button {
+        width: 200px;
+        height: 40px;
+        border-radius: 20px;
+        background-color: rgba(65, 255, 27, 0.788);
+        border: none;
+        color: rgb(15, 14, 10);
+        font-size: 1em;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+    }
+    
+    .sigin button:hover {
+        background-color: rgb(52, 212, 19);
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+    .sigin a{
+        color:  rgb(0, 0, 0);
+        font-size: 1.1em;
+        margin-right: 30%;
+        margin-top: 1%;
+        text-decoration: none;
+        
+    }
+    
+    .sigin a:hover{
+        color:rgb(78, 114, 21);
+    }
+    
+    @media screen and (max-width: 767px) {
+        form {
+            height: 100vh;
+            max-width: 100%;
+            overflow: hidden;
+             }
+        .animasi {
+            width: 90%;
+            height: 70%;
+            background-color: rgba(255, 255, 255, 0.863);
+            position: relative;
+            top: 15%;
+            left: 5%;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(80, 73, 73, 0.555);
+        }
+        .animasi h1{
+            padding:  5% 0;
+        }
+        .animasi h1,.animasi h2 {
+            text-align: center;
+            font-size: 1em;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+        }
+        .animasi img {
+            margin-left: 34%;
+            width: 30%;
+            height: 30%;
+        }
+        .inputarea {
+            top: 38%;
+           width: 60%;
+           position: absolute;
+           left: 3%;
+           height: 17vh;
+        }
+        .sigin {
+            flex-direction: column;
+            display: flex;
+        }
+        
+        .sigin button {
+            width: 50%;
+            height: 35px;
+            /* margin-top: 30%; */
+            margin-left: 10%;
+        }
+        
+        .sigin button:hover {
+            background-color: rgb(52, 212, 19);
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+        .sigin a{
+            margin-left: 20%;
+            margin-top: 15%;
+            font-size: 0.9em;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+        }
+        
+        .sigin a:hover{
+            color:rgb(78, 114, 21);
+        }
+    }
+    
+    @media screen and (max-height: 520px) {
+        .sigin {
+            position: fixed;
+            bottom: 20%;
+            left: 12%;
+            display: flex;
+            flex-direction: row;
+        }
+        .sigin button {
+            width: 150%;
+            height: 35px;
+            margin-top: -10%;
+        }
+        .sigin a{
+            margin-top: 0;
+          
+        }
+    }

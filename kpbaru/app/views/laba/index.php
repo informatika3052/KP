@@ -4,7 +4,7 @@
 
     <h2 class="mb-4">LABA RUGI</h2>
 
-    <form action="" method="post">
+    <form action="<?= BASEURL; ?>/laba/tambah" method="post">
 
         <div class="mb-3 row">
             <label for="beban_gaji" class=" col-sm-4 form-label">Beban Gaji</label>
@@ -79,7 +79,7 @@
             </div>
         </div>
 
-        <input type="hidden" name="idKotor" id="idKotor">
+        <input type="hidden" name="idKotorr" id="idKotorr">
         <div class="col-auto mt-4">
             <button type="submit" class="btn btn-primary mb-3" name="laba">Simpan</button>
         </div>

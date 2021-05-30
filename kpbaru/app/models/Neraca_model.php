@@ -2,7 +2,6 @@
 
 class Neraca_model
 {
-    private $table = 'neraca';
     private $tablee = 'pegawai';
 
     private $db;
@@ -30,7 +29,7 @@ class Neraca_model
         $userId = $_SESSION['idPegawai'];
 
         $query = "INSERT INTO neraca VALUES (
-            '',:idPegawaiiii,:kasir,:bank,:brankas,:piutang,:stok,:sewa,:akumulasi_sewa,:komp,:akumulasi_komp,:kulkas,:akumulasi_kulkas,:kulkas_kantor,:akumulasi_kulkas_kantor,:hp,:akumulasi_hp)";
+            '',:idPegawaiiii,:kasir,:bank,:brankas,:piutang,:stok,:sewa,:akumulasi_sewa,:komp,:akumulasi_komp,:kulkas,:akumulasi_kulkas,:kulkas_kantor,:akumulasi_kulkas_kantor,:hp,:akumulasi_hp,:tanggalNeraca)";
 
         $this->db->query($query);
         $this->db->bind('idPegawaiiii', $userId);
@@ -49,6 +48,7 @@ class Neraca_model
         $this->db->bind('akumulasi_kulkas_kantor', $data['akumulasi_kulkas_kantor']);
         $this->db->bind('hp', $data['hp']);
         $this->db->bind('akumulasi_hp', $data['akumulasi_hp']);
+        $this->db->bind('tanggalNeraca', $data['tanggalNeraca']);
 
         var_dump($_POST);
         $this->db->execute();

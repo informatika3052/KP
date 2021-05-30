@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halaman <?= $data['judul']; ?></title>
-    <link rel="stylesheet" href="<?= BASEURL; ?>/css/dashboard.css">
-    <link rel="stylesheet" href="<?= BASEURL; ?>/css/sidebar.css">
+    <link rel="stylesheet" href="<?= BASEURL; ?>/css/sidebars.css">
     <link rel="stylesheet" href="<?= BASEURL; ?>/css/bootstrap.css">
     <link rel="stylesheet" href="<?= BASEURL; ?>/css/scrollTop.css">
+    <link rel="stylesheet" href="<?= BASEURL; ?>/css/print.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300&family=Playfair+Display:wght@400;500&family=Poppins:wght@200;300;500;600&family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
@@ -30,9 +30,9 @@
         </div>
         <ul>
             <li>
-                <a href="<?= BASEURL; ?>/home/dashboard">
-                    <span class="icon"><i class="fa fa-home"></i></span>
-                    <span class="title">Home</span>
+                <a href="<?= BASEURL; ?>/home/dashboardAnggota">
+                    <span class="icon"><i class="fa fa-user"></i></span>
+                    <span class="title">Dashboard</span>
                 </a>
             </li>
             <li>
@@ -54,7 +54,7 @@
                 </a>
             </li>
             <li>
-                <a href="<?= BASEURL; ?>/laba ">
+                <a href="<?= BASEURL; ?>/laba">
                     <span class="icon"><i class="fa fa-leaf"></i></span>
                     <span class="title">Laba</span>
                 </a>

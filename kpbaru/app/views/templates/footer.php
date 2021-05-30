@@ -6,7 +6,6 @@
 <script src="<?= BASEURL; ?>/js/script.js"></script>
 <script src="<?= BASEURL; ?>/js/sidebar.js"></script>
 <script src="<?= BASEURL; ?>/js/formatRupiah.js"></script>
-<script src="<?= BASEURL; ?>/js/dashboard.js"></script>
 <script src="<?= BASEURL; ?>/js/scrollTop.js"></script>
 
 </body>

@@ -1,9 +1,12 @@
 <div class="neraca container">
     <h1 class="text-center">Berkah Medika Nusantara</h1>
     <h2 class="text-center">MART</h2>
-
     <h2 class="mb-4">MODAL</h2>
-
+    <div class="row">
+        <div class="col-lg-6">
+            <?= Flasher::flash(); ?>
+        </div>
+    </div>
     <form action="<?= BASEURL; ?>/modal/tambah" method="post">
 
         <div class="mb-3 row">

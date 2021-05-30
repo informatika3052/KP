@@ -18,6 +18,7 @@ class Database
         ];
         // data source name
         $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->db_name;
+        // var_dump($dsn);
         try {
 
             $this->dbh =  new PDO($dsn, $this->user, $this->pass, $option);

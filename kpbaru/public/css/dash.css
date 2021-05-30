@@ -1,6 +1,6 @@
 
 .header {
-    /* background-color: rgba(232, 253, 45, 0.973); */
+    background-color: rgba(232, 253, 45, 0.973);
     /* background-color: rgb(226, 243, 77); */
     /* background: linear-gradient(to right bottom, rgba(238, 231, 231, 0.699),rgb(253, 253, 253),white); */
     /* background:linear-gradient(to bottom right, rgba(216, 247, 42, 0.925) ,rgba(197, 241, 37, 0.959),rgba(237, 253, 12, 0.959)); */
@@ -115,8 +115,7 @@ margin-top: 15%;
     position: relative;
     width: 100%;
     height: 100vh;
-    background: whitesmoke;
-    /* background:linear-gradient(to bottom right, rgba(216, 247, 42, 0.925) ,rgba(197, 241, 37, 0.959),rgba(237, 253, 12, 0.959)); */
+    background:linear-gradient(to bottom right, rgba(216, 247, 42, 0.925) ,rgba(197, 241, 37, 0.959),rgba(237, 253, 12, 0.959));
     /* background:linear-gradient(to bottom right, rgba(55, 241, 55, 0.884) ,rgba(50, 218, 50, 0.884),rgba(38, 172, 38, 0.884)); */
     overflow: hidden;
 }
@@ -165,8 +164,7 @@ margin-top: 15%;
 
 /* Footer */
 footer{
-    /* background-color: rgb(32, 32, 90); */
-    background-color: #32CD32;
+    background-color: rgb(32, 32, 90);
     position: relative;
     bottom: 0;
     left: 0;
@@ -215,7 +213,6 @@ footer span a {
 
 .unit {
     height: 220vh;
-    
 }
 .unit h1 {
     padding-top: 2%;

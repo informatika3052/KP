@@ -1,9 +1,12 @@
 <div class="neraca container">
     <h1 class="text-center">Berkah Medika Nusantara</h1>
     <h2 class="text-center">MART</h2>
-
     <h2 class="mb-4">NERACA</h2>
-
+    <div class="row">
+        <div class="col-lg-6">
+            <?= Flasher::flash(); ?>
+        </div>
+    </div>
     <form action="<?= BASEURL; ?>/neraca/tambah" method="post">
 
         <div class="mb-3 row">
@@ -98,6 +101,7 @@
         </div>
 
         <input type="hidden" name="idPegwaiiii" id="idPegwaiiii">
+        <input type="hidden" name="tanggalNeraca" id="tanggalNeraca" value="<?= date("Y-m-d"); ?>">
         <div class="col-auto mt-4">
             <button type="submit" class="btn btn-primary mb-3" name="neraca">Simpan</button>
         </div>

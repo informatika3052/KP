@@ -1,12 +1,22 @@
 const tombol = document.querySelector('.toggle');
 const navigation = document.querySelector('.navigation');
+const navigationUl = document.querySelector('.navigation ul');
 const neraca = document.querySelector('.neraca');
+const tableNeraca = document.querySelector('.table-neraca');
 
+// neraca.forEach((childNeraca) => {
+//     childNeraca.addEventListener('click', function () {
+//         childNeraca.classList.toggle('active');
+//     })
+// })
 tombol.addEventListener('click', function () {
     tombol.classList.toggle('active');
     navigation.classList.toggle('active');
+    navigationUl.classList.toggle('active');
     neraca.classList.toggle('active');
+    tableNeraca.classList.toggle('active');
 })
+
 const lilili = document.querySelectorAll('.navigation ul li');
 
 lilili.forEach(element => {

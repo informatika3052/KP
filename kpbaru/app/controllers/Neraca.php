@@ -6,6 +6,11 @@ class Neraca extends Controller
     // fungsi yang dipanggil ketika  user masuk ke halaman Neraca
     public function index()
     {
+
+        if (!isset($_SESSION["login"])) {
+            header('Location: ' . BASEURL . '/home/login');
+            exit;
+        }
         $data['judul'] = 'Neraca';
         $this->view('templates/header', $data);
         $this->view('neraca/index', $data);
@@ -16,12 +21,6 @@ class Neraca extends Controller
     {
 
         if (isset($_POST["neraca"])) {
-            // foreach ($_POST as $key => $value) {
-            //     $post[$key] = $value;
-            //     var_dump($key[$value]);
-            //     // var_dump($post[$key]);
-            //     // echo "POST parameter '$key' has '$value'";
-            // }
 
             // $_POST['kasir'] = preg_replace("/[^0-9]/", "", $_POST['kasir']);
             $_POST['bank'] = preg_replace("/[^0-9]/", "", $_POST['bank']);
@@ -38,15 +37,17 @@ class Neraca extends Controller
             $_POST['akumulasi_kulkas_kantor'] = preg_replace("/[^0-9]/", "", $_POST['akumulasi_kulkas_kantor']);
             $_POST['hp'] = preg_replace("/[^0-9]/", "", $_POST['hp']);
             $_POST['akumulasi_hp'] = preg_replace("/[^0-9]/", "", $_POST['akumulasi_hp']);
+            // $_POST['tanggalNeraca'] = strtotime($_POST['tanggalNeraca']);
 
-            // var_dump($_POST['kasir']);
-            var_dump($_POST);
+
+            // var_dump($_POST['tanggalNeraca']);
+            // var_dump($_POST);
 
 
             $data =  $this->model('Neraca_Model')->tambahDataNeraca($_POST);
             if ($data > 0) {
-                Flasher::setFlash('berhasil', 'ditambahkan', 'success');
-                header('Location: ' . BASEURL . '/home/dashboard');
+                // Flasher::setFlash('berhasil', 'ditambahkan', 'success');
+                header('Location: ' . BASEURL . '/modal');
                 exit;
             } else {
                 Flasher::setFlash('gagal', 'ditambahkan', 'danger');

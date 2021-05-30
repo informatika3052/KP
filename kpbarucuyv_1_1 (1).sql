@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 08, 2021 at 06:58 PM
+-- Generation Time: May 30, 2021 at 07:51 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 7.4.16
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `kpbarucuy`
+-- Database: `kpbarucuyv.1.1`
 --
 
 -- --------------------------------------------------------
@@ -32,15 +32,17 @@ CREATE TABLE `kotor` (
   `idPegawaii` int(11) DEFAULT NULL,
   `pendapat` int(11) DEFAULT NULL,
   `biayaPendapat` int(11) DEFAULT NULL,
-  `total` int(11) DEFAULT NULL
+  `total` int(11) DEFAULT NULL,
+  `tanggalKotor` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `kotor`
 --
 
-INSERT INTO `kotor` (`idKotor`, `idPegawaii`, `pendapat`, `biayaPendapat`, `total`) VALUES
-(1, 1, 4000, 6000, 2000);
+INSERT INTO `kotor` (`idKotor`, `idPegawaii`, `pendapat`, `biayaPendapat`, `total`, `tanggalKotor`) VALUES
+(6, 2, 33000, 20000, 330000, '2021-05-29'),
+(7, 1, 66000, 8000, 90000, '2021-05-30');
 
 -- --------------------------------------------------------
 
@@ -70,7 +72,8 @@ CREATE TABLE `labarugi` (
 --
 
 INSERT INTO `labarugi` (`idRugi`, `idKotorr`, `beban_gaji`, `beban_kebersih`, `beban_bensin`, `beban_listrik`, `beban_sewa`, `beban_hp`, `penyusutan_kulkas`, `penyusutan_kulkas_kantor`, `penyusutan_peralatan`, `penyusutan_rak`, `total_beban`, `total_laba`) VALUES
-(2, 1, 1000, 1000, 2000, 2000, 3000, 4000, 5000, 6000, 7000, 9000, 5000, 7000);
+(4, 6, 40000, 23000, 34000, 330000, 45000, 78000, 66000, 78000, 98000, 98700, 88000, 99000),
+(5, 7, 8000, 80000, 90000, 98000, 6600, 89000, 97000, 79000, 76000, 678000, 68900, 65000);
 
 -- --------------------------------------------------------
 
@@ -93,8 +96,8 @@ CREATE TABLE `modal` (
 --
 
 INSERT INTO `modal` (`id_modal`, `id_neraca`, `modal_dana`, `hutang`, `penambahan_modal`, `rugi_tahun`, `total_aktiva`) VALUES
-(1, 1, 50000, 12000, 15000, 4000, 12000),
-(6, 36, 556556, 56, 5656, 56, 56);
+(4, 3, 56000, 78500, 85000, 875800, 78600),
+(5, 4, 678000, 78000, 687600, 78000, 66000);
 
 -- --------------------------------------------------------
 
@@ -105,7 +108,7 @@ INSERT INTO `modal` (`id_modal`, `id_neraca`, `modal_dana`, `hutang`, `penambaha
 CREATE TABLE `neraca` (
   `id_neceraca` int(11) NOT NULL,
   `idPegawaiiii` int(11) DEFAULT NULL,
-  `kasir` int(11) DEFAULT NULL,
+  `kasir` varchar(254) DEFAULT NULL,
   `bank` int(11) DEFAULT NULL,
   `brankas` int(11) DEFAULT NULL,
   `piutang` int(11) DEFAULT NULL,
@@ -119,16 +122,17 @@ CREATE TABLE `neraca` (
   `kulkas_kantor` int(11) DEFAULT NULL,
   `akumulasi_kulkas_kantor` int(11) DEFAULT NULL,
   `hp` int(11) DEFAULT NULL,
-  `akumulasi_hp` int(11) DEFAULT NULL
+  `akumulasi_hp` int(11) DEFAULT NULL,
+  `tanggalNeraca` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `neraca`
 --
 
-INSERT INTO `neraca` (`id_neceraca`, `idPegawaiiii`, `kasir`, `bank`, `brankas`, `piutang`, `stok`, `sewa`, `akumulasi_sewa`, `komp`, `akumulasi_komp`, `kulkas`, `akumulasi_kulkas`, `kulkas_kantor`, `akumulasi_kulkas_kantor`, `hp`, `akumulasi_hp`) VALUES
-(1, 1, 2, 10, 2, 1000, 12, 12000, 2000, 23200, 40000, 3, 1000, 12000, 12000, 10000, 15000),
-(36, 2, 65445, 654564, 6545, 46, 4, 4, 44, 4, 46, 664, 64, 564, 564, 654, 54);
+INSERT INTO `neraca` (`id_neceraca`, `idPegawaiiii`, `kasir`, `bank`, `brankas`, `piutang`, `stok`, `sewa`, `akumulasi_sewa`, `komp`, `akumulasi_komp`, `kulkas`, `akumulasi_kulkas`, `kulkas_kantor`, `akumulasi_kulkas_kantor`, `hp`, `akumulasi_hp`, `tanggalNeraca`) VALUES
+(3, 1, 'danang', 23000, 33000, 5600, 7600, 68000, 87000, 55000, 75600, 65000, 75850, 56700, 758, 7600, 5600, '2021-05-30'),
+(4, 1, 'dian', 70000, 6700, 76700, 7800, 2000, 32000, 15100, 54670, 4000, 678000, 69600, 687800, 89700, 78000, '2021-05-29');
 
 -- --------------------------------------------------------
 
@@ -197,25 +201,25 @@ ALTER TABLE `pegawai`
 -- AUTO_INCREMENT for table `kotor`
 --
 ALTER TABLE `kotor`
-  MODIFY `idKotor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idKotor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `labarugi`
 --
 ALTER TABLE `labarugi`
-  MODIFY `idRugi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idRugi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `modal`
 --
 ALTER TABLE `modal`
-  MODIFY `id_modal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_modal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `neraca`
 --
 ALTER TABLE `neraca`
-  MODIFY `id_neceraca` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id_neceraca` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `pegawai`

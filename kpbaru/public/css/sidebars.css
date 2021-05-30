@@ -26,8 +26,11 @@ body {
       /* margin-left: 20%; */
       background-color: violet;
 }
-
-
+.table-neraca.active{
+    position: absolute;
+    top: 0;
+    left: 40%;
+}
 .neraca h1, .neraca h2 {
     font-size: 2.5em;
     font-family: 'Roboto', sans-serif;
